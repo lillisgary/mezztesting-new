@@ -45,6 +45,14 @@
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
 
 {% block extra_js %}
+
+{% endblock %}
+{% endcompress %}
+
+{% nevercache %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+{% endnevercache %}
 <script type="text/javascript">
 $(document).ready(function(){
      $("#myCarousel").carousel({
@@ -53,14 +61,6 @@ $(document).ready(function(){
      });
 });
 </script>
-{% endblock %}
-{% endcompress %}
-
-{% nevercache %}
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-{% endnevercache %}
-
 <!--[if lt IE 9]>
 <script src="{% static "js/html5shiv.js" %}"></script>
 <script src="{% static "js/respond.min.js" %}"></script>
