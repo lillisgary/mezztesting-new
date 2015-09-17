@@ -1,7 +1,20 @@
-{% extends "pages/page.html" %}
+{% extends "pages/richtextpage.html" %}
 {% load i18n %}
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
-
+{% block extra_head %}
+<style type="text/css">
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}
+</style>
+{% endblock %}
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block l_w %}{% endblock %}
@@ -48,7 +61,7 @@
         <div class="carousel-inner">
         {% for slide in page.homepage.slides.all %}
             {% if forloop.counter == 1 %}
-            <div class="active item">
+            <div class="item active">
                 <img src="{{ MEDIA_URL }}{% thumbnail slide.image 1920 690 %}" class="img-responsive" alt="">
                 <h2>Slide 1</h2>              
          		 <div class="carousel-caption">
