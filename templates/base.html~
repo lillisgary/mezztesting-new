@@ -44,7 +44,8 @@
 <script src="{% static "js/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
 <script src="{% static "js/customo_one.js" %}"></script>
-<script src="{% static "js/customo_two.js" %}"></script>
+
+
 
 {% block extra_js %}
 <script type="text/javascript">
